@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ 
+<!-----fic recs page 01 by darthvcder/arithemes----->
+ 
+<head>
+ 
+ 
+ 
+    <title>fic recs</title> <!-----change the title on the tab here----->
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/xd6ujov/9Rpouml9f/imagesloaded.pkgd.min.js"></script> 
+<script src="https://static.tumblr.com/f6blkfc/3khouzw5b/masonry.pkgd.min.js"></script>
+
+<script>$(document).ready(function(){
+var $grid = $(".container"); $grid.imagesLoaded(function() {
+   $grid.masonry({
+       itemSelector: ".fic",
+       columnWidth: 320
+   });
+});
+$(".button").click(function(){
+   $(this).addClass("selected");
+   $(".button").not($(this)).removeClass("selected");
+   var ssf = $(this).attr("filter");
+   $(".fic." + ssf).show();
+   $(".fic").not("." + ssf).hide();
+   $grid.masonry();
+});
+});</script>
+   
+   
+    <style type="text/css">
+ 
+   
+::-webkit-scrollbar-thumb {
+    background-color: #eeeeee; /*change the scrollbar*/
+    height:auto;
+    border-bottom:none;
+}
+::-webkit-scrollbar {
+    height:9px;
+    width:5px;
+    background-color: transparent; 
+   
+}
+ 
+::selection {
+    background-color: #a82a52; /*selection bg*/
+    color: #fcfcfc; /*selection text*/
+}
+   
+body {
+      background-color: #fcfcfc; /*background color*/
+      background-image: url(/); /*background image url if you want one*/
+      background-repeat: repeat;
+      font-family: arial;
+      line-height: 110%;
+      font-size: 11px;
+      color: #9c9c9c; /*tag/categories color*/
+}
+ 
+     
+a {
+    
+    color: #a82a52; /*fic title color & general link color*/
+    text-decoration: none;
+}
+
+a:hover {
+    color: #9c9c9c; /*fic title/general link hover color*/
+    -webkit-transition: 0.8s;
+      -moz-transition: 0.8s;
+      transition: 0.8s;
+}
+
+b {
+    color: #ff9f8c; /*bold color*/
+}
+
+#title {
+    font-size: 15px;
+    color: #a82a52; /*page title color*/
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+#nav {
+    font-size: 9px;
+    margin-top: 10px;
+}
+
+#nav a {
+    height: relative;
+    color: #b5b5b5; /*home/ask/archive links color*/
+    text-decoration: underline;
+    padding-right: 2px;
+    padding-left: 2px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+#nav a:hover {
+    color: #9c9c9c; /*home/ask/archive links hover color*/
+}
+
+.button{
+    color: #b5b5b5; /*filter text color*/
+    cursor: help;
+    font-size: 9px;
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.button.selected {
+    color: #9c9c9c; /*selected filter color*/
+    text-decoration: underline;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.fic {
+    width: 260px;
+    height: relative;
+    background-color: white; /*fic rec bg color*/
+    padding: 10px;
+    border: 1px solid #eeeeee; /*fic rec border color*/
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+  
+.title {
+    text-align: center;
+    background-color: #fcfcfc; /*fic title/author bg color*/
+    padding: 6px;
+    line-height: 1.5;
+    border: 1px solid #eeeeee; /*fic title/author border color*/
+    border-radius: 5px;
+}
+
+.author {
+    font-size: 9px;
+    color: #b5b5b5; /*author color*/
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    border-top: 1px solid #eeeeee; /*border between fic title/author color*/
+    padding-top: 2px;
+}
+
+.author b {
+    color: #9c9c9c; /*color of the "by:" part of the author section*/
+}
+
+
+
+.summary {
+    background-color: #fcfcfc; /*summary bg*/
+    padding: 6px;
+    color: #b5b5b5; /*summary text*/
+    font-size: 10px;
+    text-align: left;
+    margin-top: 10px;
+    border: 1px solid #eeeeee; /*summary border*/
+    border-radius: 5px;
+}
+
+.summary b {
+    color: #9c9c9c; /*the "summary:" part of the summary color*/
+}
+
+.info {
+    background-color: #fcfcfc; /*tags/categories/info bg*/
+    padding: 6px;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    border: 1px solid #eeeeee; /*tags/categories/info border*/
+    border-radius: 5px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<center>
+
+<div id="title">
+    fic recs <!--page title-->
+</div>
+
+<div id="nav">
+    <a href="/">return</a> <!--home link-->
+    <a href="/ask">ask</a> <!--ask link-->
+    <a href="/archive">archive</a> <!--archive link-->
+</div>
+
+<!--here is where you change your filters for your specific recs. do not replace the filter="fic" part of the first one.
+
+for example, if you wanted to have a filter for character a/character b, you might change filter="filter1" to filter="ab". if you wanted character c/character d for filter 2, you'd then change filter="filter2" to something like filter="ab". you can add as many as you want by pasting the following code after filter 4 and editing it as many times as you need. without the quotations:
+
+"<div class="button" filter="yourfilter">filter </div>"
+
+you can also change any of the genre filters or the favorites filter to whatever you want. those are just some typical theme filters.
+
+-->
+
+<div class="button selected" filter="fic">all fics</div>
+<div class="button" filter="filter1">filter 1</div>
+<div class="button" filter="filter2">filter 2</div>
+<div class="button" filter="filter3">filter 3</div>
+<div class="button" filter="filter4">filter 4</div>
+
+<div class="button" filter="gen">gen</div>
+<div class="button" filter="teen">teen</div>
+<div class="button" filter="mature">mature</div>
+<div class="button" filter="explicit">explicit</div>
+
+<div class="button" filter="fave">favorites</div>
+
+
+
+
+<div class="container">
+
+<!--here's where you'll put your fics. just replace all the below info with the info from your fic. 
+
+where it says "<div class="fic filter1 explicit">" or something similar for the following ones, you HAVE to keep the "fic" part of it. replace filter1 with whatever your filter is. change explicit to whatever rating the fic is. after that, add whatever other filters you want. for example, you could put
+
+"<div class="fic pairing gen fave">"
+
+
+-->
+
+<!--rec 1-->
+<div class="fic filter1 explicit">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 1</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 1-->
+
+<!--rec 2-->
+<div class="fic filter2 gen">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 2</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 2-->
+
+<!--rec 3-->
+<div class="fic filter3 teen">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 3</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 3-->
+
+<!--rec 4-->
+<div class="fic filter4 mature">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 4</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 4-->
+
+<!--rec 5-->
+<div class="fic filter3 gen">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 5</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 5-->
+
+<!--rec 6-->
+<div class="fic filter1 mature fave">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 6</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 6-->
+
+<!--rec 7-->
+<div class="fic filter4 teen fave">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 7</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 7-->
+
+<!--rec 8-->
+<div class="fic filter4 explicit ">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 8</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 8-->
+
+<!--rec 9-->
+<div class="fic filter1 gen ">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 9</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 9-->
+
+<!--rec 10-->
+<div class="fic filter4 mature ">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title 10</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+<!--end rec 10-->
+
+
+<!--to add more fics, paste the below under rec 10
+
+
+<div class="fic filter rating ">
+    
+    <div class="title">
+        <a href="fic link here including http://">Your Fic Rec Title</a>
+        
+        <div class="author">
+            <b>by:</b> author (author site)
+        </div>
+    </div>
+    
+    
+    
+    <div class="summary">
+        <b>Summary:</b> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius facilisis eros. Sed erat. In in velit quis arcu ornare laoreet.
+    </div>
+    
+    
+    <div class="info">pairing</div>
+    <div class="info">word count</div>
+    <div class="info">rating</div>
+    <div class="info">warnings</div>
+    
+</div>
+
+
+-->
+
+
+</div>
+</center>
+    
+<!--DON'T TOUCH ANYTHING HERE EXCEPT FOR #000 TO CHANGE LINK COLOR-->
+
+    <div style="position:fixed;bottom:8px; right:15px; font-size:9px; font-family:calibri; height: 15px;"><a style="color:#000; text-decoration:none;" href="http://arithemes.tumblr.com/">A</a></center></div>
+    
+</body>
